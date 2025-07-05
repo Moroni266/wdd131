@@ -6,6 +6,12 @@
     font-style: normal;
 }
 
+@media screen and (max-width: 568px) {
+    main {
+      grid-template-columns: 1fr;
+    }
+}
+
 header {
     display: flex;
     flex-direction: column;
@@ -95,10 +101,4 @@ footer {
   
 footer p {
     margin: 0.2rem 0;
-}
-
-@media screen and (max-width: 568px) {
-    main {
-      grid-template-columns: 1fr;
-    }
 }
