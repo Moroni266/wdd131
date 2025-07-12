@@ -1,0 +1,161 @@
+header, nav, footer {
+    padding: 10px;
+    text-align: center;
+}
+
+main, header, .navigation, section {
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+header {
+    background-color: #bbb;
+    display: grid;
+    gap: 1rem;
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 30px #333;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+#menu {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 0.5rem 0.75rem;
+    background-color: #eee;
+    color: #000;
+}
+
+#menu::before {
+    content: "≡";
+}
+
+#menu.show::before {
+    content: "X";
+}
+
+.navigation {
+    list-style: none;
+    max-width: 760px;
+}
+
+.navigation li {
+    display: none;
+}
+
+.navigation a {
+    display: block;
+    padding: 0.75rem;
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    font-size: clamp(1rem, 2vmin, 1.5rem);
+    transition: 0.5s;
+    text-align: left;
+}
+
+.navigation a:hover,
+.navigation a:active {
+    color: white;
+    background-color: black;
+}
+
+.show li {
+    display: block;
+}
+
+nav {
+    background-color: #36454f;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+    font-size: larger;
+}
+
+nav a:hover {
+    text-decoration: underline double;
+    background-color: #eee;
+    color: #000;
+}
+
+section {
+    margin: 1rem auto;
+    max-width: 750px;
+    padding: 0.5rem;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    place-items: center;
+    font-weight: 700;
+    border-bottom: 1px solid #777;
+    margin-bottom: 1rem;
+}
+
+figure {
+    background-color: #fff;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    margin: 0.5rem;
+}
+
+figcaption {
+    font-size: smaller;
+}
+
+.hover:hover {
+    box-shadow: 0 0 50px #333;
+}
+
+@media only screen and (min-width: 40em) {
+    .navigation {
+        display: flex;
+    }
+
+    .navigation li {
+        display: block;
+        flex: 1 1 100%;
+    }
+
+    .navigation a {
+        text-align: center;
+    }
+
+    #menu {
+        display: none;
+    }
+}
+
+@media (max-width: 639px) {
+    nav {
+        display: none;
+    }
+
+    nav.show {
+        display: block;
+    }
+}
+
